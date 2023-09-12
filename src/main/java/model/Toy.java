@@ -32,6 +32,6 @@ public class Toy implements Comparable<Toy> {
 
     @Override
     public int compareTo(Toy o) {
-        return this.weight - o.weight;
+        return o.weight - this.weight;
     }
 }

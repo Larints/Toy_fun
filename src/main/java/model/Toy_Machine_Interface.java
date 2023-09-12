@@ -7,4 +7,6 @@ public interface Toy_Machine_Interface {
     String get(String name);
 
     void letsFun();
+
+    void getAllToys();
 }

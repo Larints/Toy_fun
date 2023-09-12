@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Toy_Machine implements Toy_Machine_Interface {
@@ -22,7 +21,7 @@ public class Toy_Machine implements Toy_Machine_Interface {
     }
 
     @Override
-    public String get(String name) throws NullPointerException {
+    public String get(String name) {
         for (Toy toy : toys) {
             if (toy.getName().equals(name)) {
                 return toy.toString();
@@ -31,11 +30,17 @@ public class Toy_Machine implements Toy_Machine_Interface {
         return null;
     }
 
+
     @Override
     public void letsFun() {
-        for (Toy toy : toys) {
-            System.out.println(toy.toString());
-        }
+        System.out.println(toys.peek() != null ? toys.peek().toString() : null);
+        toys.poll();
     }
 
+    @Override
+    public void getAllToys() {
+        for (Toy toy : toys) {
+            System.out.println(toy);
+        }
+    }
 }
