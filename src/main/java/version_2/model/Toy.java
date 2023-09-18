@@ -19,6 +19,9 @@ public class Toy implements Comparable<Toy> {
         this.weight = weight;
     }
 
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 
     public String getName() {
         return name;
@@ -34,12 +37,9 @@ public class Toy implements Comparable<Toy> {
 
     @Override
     public String toString() {
-        return "Toy{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", weight=" + weight +
-                '}';
+        return "Игрушка: " + name +  " с порядковым номером " + id;
     }
+
 
     @Override
     public int compareTo(Toy o) {

@@ -1,5 +1,9 @@
 package version_2.model;
 
+/**
+ * @apiNote
+ * Класс представляющий собой участника розыгрыша.
+ */
 public class Participant implements Comparable<Participant> {
 
     private int ticket;
@@ -21,10 +25,7 @@ public class Participant implements Comparable<Participant> {
 
     @Override
     public String toString() {
-        return "Participant{" +
-                "id=" + ticket +
-                ", name='" + name + '\'' +
-                '}';
+        return "Участник " + name + " с билетом номер " + ticket;
     }
 
     @Override

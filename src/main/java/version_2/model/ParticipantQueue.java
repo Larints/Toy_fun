@@ -1,18 +1,27 @@
 package version_2.model;
 
 import java.util.PriorityQueue;
+import java.util.Random;
 
+/**
+ * @apiNote
+ * Класс представляющий собой очередь из участников.
+ * Каждому участнику случайным образом разыгрывается билет.
+ */
 public class ParticipantQueue  {
 
-    private int id;
+    private int ticket;
+
+    private Random random;
     private PriorityQueue<Participant> participants;
 
     public ParticipantQueue() {
         participants = new PriorityQueue<>();
+        random = new Random();
     }
 
-    public void addParticipant(int id, String name) {
-        participants.add(new Participant(id, name));
+    public void addParticipant(String name) {
+        participants.add(new Participant(random.nextInt(0, 100), name));
     }
 
     public boolean isEmpty() {
