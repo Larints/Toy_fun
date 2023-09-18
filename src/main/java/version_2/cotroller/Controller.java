@@ -1,7 +1,7 @@
 package version_2.cotroller;
 
 import version_2.model.ParticipantQueue;
-import version_2.model.Toy_Machine;
+import version_2.model.ToyMachine;
 import version_2.viewer.UI;
 
 
@@ -12,13 +12,13 @@ public class Controller {
 
     private ParticipantQueue participantQueue;
 
-    private Toy_Machine toyMachine;
+    private ToyMachine toyMachine;
 
     private UI userInterface;
 
     public Controller() {
         this.participantQueue = new ParticipantQueue();
-        this.toyMachine = new Toy_Machine(participantQueue);
+        this.toyMachine = new ToyMachine(participantQueue);
         this.userInterface = new UI();
     }
 

@@ -4,7 +4,7 @@ package version_2.model;
 /**
  * Интерфейс, имитирующий раффл.
  */
-public interface Toy_Machine_Interface {
+public interface ToyMachineInterface {
 
     void put(String name);
 

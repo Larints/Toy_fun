@@ -1,6 +1,5 @@
 package version_2.model;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import java.util.Random;
  * @apiNote Класс представляющий собой имитацию, розыгрыша игрушек.
  */
 
-public class Toy_Machine implements Toy_Machine_Interface {
+public class ToyMachine implements ToyMachineInterface {
 
     private int id;
 
@@ -26,7 +25,7 @@ public class Toy_Machine implements Toy_Machine_Interface {
      * @apiNote Конструктор класса
      */
 
-    public Toy_Machine(ParticipantQueue participantQueue) {
+    public ToyMachine(ParticipantQueue participantQueue) {
         this.participantQueue = participantQueue;
         random = new Random();
         toys = new ArrayList<>();
